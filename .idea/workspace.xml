@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf0c3d3f-2afa-4039-94ea-7fe8eb8b471f" name="Changes" comment="working java code compiler">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/sm/backend/service/CodeExecutionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/sm/backend/service/CodeExecutionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectColorInfo">{
@@ -217,7 +218,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722076226448</updated>
       <workItem from="1722076227538" duration="7961000" />
-      <workItem from="1722693601984" duration="6457000" />
+      <workItem from="1722693601984" duration="6563000" />
     </task>
     <task id="LOCAL-00001" summary="backend initialization">
       <option name="closed" value="true" />
