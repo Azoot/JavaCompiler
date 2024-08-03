@@ -31,7 +31,7 @@ public class CodeExecutionService {
 
         JavaFileObject file = new JavaSourceFromString(className, sourceCode);
 
-        Iterable<? extends JavaFileObject> compilationUnits = Arrays.asList(file);
+        Iterable<? extends JavaFileObject> compilationUnits = List.of(file);
         JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, diagnostics, null, null, compilationUnits);
 
         System.out.println("Compiling...");
@@ -66,7 +66,7 @@ public class CodeExecutionService {
             for (Diagnostic<? extends JavaFileObject> diagnostic : diagnostics.getDiagnostics()) {
                 errorMessage.append(diagnostic.getMessage(null)).append("\n");
             }
-            throw new Exception("Compilation failed: " + errorMessage.toString());
+            throw new Exception("Compilation failed: " + errorMessage);
         }
     }
 
