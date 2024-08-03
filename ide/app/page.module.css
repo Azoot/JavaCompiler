@@ -1,0 +1,29 @@
+/* page.module.css */
+.topBar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.javaButton, .playButton {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.javaButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.outputWindow {
+    padding: 20px;
+    background: #282c34;
+    color: #fff;
+    font-family: monospace;
+}
