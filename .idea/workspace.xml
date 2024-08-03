@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf0c3d3f-2afa-4039-94ea-7fe8eb8b471f" name="Changes" comment="working java code compiler">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/sm/backend/service/CodeExecutionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/sm/backend/service/CodeExecutionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722076226448</updated>
       <workItem from="1722076227538" duration="7961000" />
-      <workItem from="1722693601984" duration="6330000" />
+      <workItem from="1722693601984" duration="6457000" />
     </task>
     <task id="LOCAL-00001" summary="backend initialization">
       <option name="closed" value="true" />
@@ -243,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722699897304</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working java code compiler">
+      <option name="closed" value="true" />
+      <created>1722699995983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722699995983</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -36,4 +36,4 @@ out/
 .vscode/
 /backend/MyClass.class
 /MyClass.class
-/backend/MyClass.class
+/*.class
