@@ -11,9 +11,47 @@ const files = {
     language: "java",
     value: `import java.util.Date;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Main {
+
+    // Entry point of the application
     public static void main(String[] args) {
-        Date date = new Date();
+        // Initialize DateService
+        DateService dateService = new DateService();
+
+        // Get today's date
+        LocalDateTime today = dateService.getToday();
+
+        // Get date as string
+        String dateString = dateService.dateToString(today);
+
+        // Print date
+        dateService.printDate(dateString);
+    }
+}
+
+class DateService {
+    private DateTimeFormatter dateTimeFormatter;
+
+    // Constructor
+    public DateService() {
+        this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    }
+
+    // Returns today's date
+    public LocalDateTime getToday() {
+        return LocalDateTime.now();
+    }
+
+    // Converts date to string
+    public String dateToString(LocalDateTime date) {
+        return this.dateTimeFormatter.format(date);
+    }
+
+    // Prints date
+    public void printDate(String date) {
         System.out.println("Today's date is " + date);
     }
 }`,
@@ -24,12 +62,20 @@ public class Main {
 export default function Home() {
   const [fileName, setFileName] = useState("Main.java");
   const [output, setOutput] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const file = files[fileName];
 
   function handleEditorChange(value) {
-    file.value = value;
+    setFiles(oldFiles => {
+      return {
+        ...oldFiles,
+        [fileName]: { ...oldFiles[fileName], value: value }
+      };
+    });
   }
+
+// get the file like this now
+  const file = files[fileName];
 
   async function runCode() {
     const response = await fetch('http://localhost:8080/api/compile/execute', {
@@ -42,6 +88,7 @@ export default function Home() {
 
     const result = await response.text();
     setOutput(result);
+    setIsModalOpen(true);
   }
 
   return (
@@ -65,6 +112,7 @@ export default function Home() {
               Run
             </button>
           </div>
+          <div>
           <Editor
               height="75vh"
               theme="vs-dark"
@@ -77,6 +125,15 @@ export default function Home() {
         </div>
         <div className={styles.outputWindow}>
           <pre>{output}</pre>
+          {isModalOpen && (
+              <div className={styles.modal}>
+                <div className={styles.modalContent}>
+                  <div className={styles.closeButton} onClick={() => setIsModalOpen(false)}>&times;</div>
+                  <p>{output}</p>
+                </div>
+              </div>
+          )}
+        </div>
         </div>
       </>
   );
