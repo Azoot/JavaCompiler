@@ -56,3 +56,5 @@ This project uses the following development dependencies:
 - `eslint-config-next`: "14.2.5"
 - `postcss`: "^8"
 - `tailwindcss`: "^3.4.1"
+
+
