@@ -38,3 +38,4 @@ This project is a **Web-Based IDE** built with **Next.js** and **Monaco Editor**
 3. **Backend Processing:** The Spring Boot service compiles and executes the code in a secure environment.
 4. **Output Display:** The execution result or errors are returned to the frontend and displayed to the user.
 
+### More Detail in backend/README.md and ide/README.md
